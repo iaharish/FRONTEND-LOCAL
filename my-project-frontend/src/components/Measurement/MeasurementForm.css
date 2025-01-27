@@ -1,0 +1,89 @@
+/* MeasurementForm.css */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;  /* Full viewport height */
+  background-color: #f4f4f4;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 450px; /* Increased max-width to ensure form feels spacious */
+  background-color: white;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form input and textarea styling */
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-top: 8px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+/* Button container to align buttons side by side */
+.button-container {
+  display: flex;
+  justify-content: space-between; /* Use space-between to spread the buttons out */
+  gap: 16px; /* Add some space between the buttons */
+}
+
+/* Button styling */
+button {
+  padding: 12px 24px;
+  background-color: #3498db;
+  color: white;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 48%; /* Ensure both buttons are nearly the same width */
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+button:focus {
+  outline: 3px solid #2980b9; /* Improve accessibility with a focus outline */
+}
+
+label {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Specific button styling for the "Place Order" button */
+button.place-order {
+  background-color: #2ecc71; /* Green for the place order button */
+}
+
+button.place-order:hover {
+  background-color: #27ae60;
+}
+
+button.place-order:focus {
+  outline: 3px solid #27ae60;
+}
