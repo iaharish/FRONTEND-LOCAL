@@ -108,6 +108,7 @@ const Login1 = () => {
                         overlay
                         sx={{
                             flexDirection: 'row',
+                            justifyContent: 'center',
                             gap: 2,
                             [`& .${radioClasses.checked}`]: {
                                 [`& .${radioClasses.action}`]: {
@@ -139,6 +140,7 @@ const Login1 = () => {
                                     display: 'flex',
                                     flexDirection: 'column',
                                     alignItems: 'center',
+                                    justifyContent: 'center',
                                     gap: 2,
                                     p: 2,
                                     minWidth: 100,
