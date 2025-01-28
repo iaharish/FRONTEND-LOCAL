@@ -1,3 +1,12 @@
+import { useState } from 'react'
+import Login from './component/Login'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Login1 from './component/Login1'
+
+
+function App() {
+  const [count, setCount] = useState(0)
+
 
 // // // import React from 'react';
 // // // import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
