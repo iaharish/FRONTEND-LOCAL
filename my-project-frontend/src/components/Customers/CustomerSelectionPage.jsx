@@ -15,7 +15,6 @@ const CustomerSelectionPage = () => {
 
   return (
     <div className="customer-selection-page">
-      <h2>Select Customer</h2>
       <div className="card-container">
         {/* New Customer Card */}
         <div

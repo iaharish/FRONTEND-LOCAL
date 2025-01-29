@@ -182,6 +182,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './PlaceOrder.css';
 
 const PlaceOrder = ({ onSubmit }) => {
   const [formData, setFormData] = useState({
@@ -265,8 +266,8 @@ const PlaceOrder = ({ onSubmit }) => {
     <form onSubmit={handleSubmit} className="container-fluid">
       <div className="row">
         {/* Left Column */}
-        <div className="col-md-6 mb-4">
-          <div className="p-3 border">
+        <div className="col-md-6 mb-4 left-column">
+          <div className="p-4 border rounded shadow-sm">
             <h5>Customer and Order Information</h5>
             <div className="mb-3">
               <label htmlFor="customerId" className="form-label">Customer ID</label>
@@ -315,19 +316,19 @@ const PlaceOrder = ({ onSubmit }) => {
         </div>
 
         {/* Right Column */}
-        <div className="col-md-6 mb-4">
-          <div className="p-3 border">
+        <div className="col-md-6 mb-4 right-column">
+          <div className="p-4 border rounded shadow-sm">
             <h5>Select Items & Payment Details</h5>
             {/* Item Selection */}
             <div className="mb-3">
               <label className="form-label">Select Items</label>
-              <div className="row">
+              <div className="d-flex flex-wrap">
                 {catalogueItems.map((item) => (
-                  <div key={item.id} className="col-6 col-md-3 mb-2">
+                  <div key={item.id} className="p-2">
                     <button
                       type="button"
                       onClick={() => handleAddItem(item.id)}
-                      className="btn btn-outline-primary w-100"
+                      className="btn btn-outline-primary"
                     >
                       {item.name} - ${item.price}
                     </button>

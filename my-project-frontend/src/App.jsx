@@ -1,37 +1,30 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import LoginPage from './components/LoginPage';
-import AdminDashboard from './components/Admin/AdminDashboard';
-import TailorDashboard from './components/Tailor/TailorDashboard';
-import CustomerSelectionPage from './components/Customers/CustomerSelectionPage';
-import ExistingCustomerPage from './components/Customers/ExistingCustomerPage';
-import NewCustomerPage from './components/Customers/NewCustomerPage';
-import MeasurementForm from './components/Measurement/MeasurementForm';
-import PlaceOrder from './components/Order/PlaceOrder';
-import './index.css';
+import { useState } from 'react'
+import Login from './component/Login'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Login1 from './component/Login1'
+import Register from './component/Register'
 
-const App = () => {
+
+function App() {
+  const [count, setCount] = useState(0)
+
   return (
-    <Router>
-      <Routes>
-        {/* Default route to show login page */}
-        <Route path="/" element={<LoginPage />} />
+    <>
+      <h3>App Component</h3>
+      <BrowserRouter>
+        <Routes>
+          {/* <Route exact path="/" element={<Landing />} /> */}
+          {/* <Route exact path="/login" element={<Login />} /> */}
+          <Route exact path="/" element={<Login1 />} />      
+          <Route exact path="/register" element={<Register />} />
+          {/* <Route path="/about/*" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/project-type" element={<ProjectType />} />
+          <Route path="/project-category" element={<ProjectTypeCategory />} /> */}
+        </Routes>
+      </BrowserRouter>
+    </>
+  )
+}
 
-        {/* Routes after login */}
-        <Route path="/admin-dashboard" element={<AdminDashboard />} />
-        <Route path="/tailor-dashboard" element={<TailorDashboard />} />
-
-        {/* Customer-related routes */}
-        <Route path="/customer-selection" element={<CustomerSelectionPage />} />
-        <Route path="/existing-customer" element={<ExistingCustomerPage />} />
-        <Route path="/new-customer" element={<NewCustomerPage />} />
-
-        {/* Other routes */}
-        <Route path="/measurements-form" element={<MeasurementForm />} />
-        <Route path="/place-order" element={<PlaceOrder />} />
-      </Routes>
-    </Router>
-  );
-};
-
-export default App;
+export default App

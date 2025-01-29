@@ -62,19 +62,8 @@ const CustomerForm = ({ onSubmit, initialData = {} }) => {
           className="w-full p-2 border rounded"
         />
       </div>
-      <div>
-        <label htmlFor="address" className="block text-sm font-medium">
-          Address
-        </label>
-        <textarea
-          id="address"
-          name="address"
-          value={formData.address}
-          onChange={handleChange}
-          required
-          className="w-full p-2 border rounded"
-        />
-      </div>
+      
+      
       <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded">
         Save Customer
       </button>

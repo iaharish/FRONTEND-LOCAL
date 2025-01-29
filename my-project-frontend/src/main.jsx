@@ -12,7 +12,7 @@
 // )
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap CSS
+//import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap CSS
 
 import './index.css'; // Custom CSS (ensure the path is correct)
 import App from './App.jsx'; // Main App component

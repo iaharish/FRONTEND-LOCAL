@@ -1,23 +1,21 @@
-import React, { useState } from 'react';
-import './NewCustomerPage.css';
+import React, { useState } from "react";
+import "./NewCustomerPage.css";
 
 const NewCustomerPage = () => {
-  const [customerName, setCustomerName] = useState('');
-  const [phoneNumber, setPhoneNumber] = useState('');
-  const [email, setEmail] = useState('');
-  const [address, setAddress] = useState('');
+  const [customerName, setCustomerName] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [email, setEmail] = useState("");
+  const [address, setAddress] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Logic to save customer details
-    console.log('Customer Created:', { customerName, phoneNumber, email, address });
+    console.log("Customer Created:", { customerName, phoneNumber, email, address });
   };
 
   return (
     <div className="new-customer-page">
       <div className="form-container">
-        <h2 className="form-title">New Customer</h2>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="form-grid">
           <div className="form-group">
             <label htmlFor="customerName">Customer Name</label>
             <input
@@ -51,21 +49,20 @@ const NewCustomerPage = () => {
             />
           </div>
 
-          <div className="form-group">
-            <label htmlFor="address">Address</label>
-            <textarea
-              id="address"
-              value={address}
-              onChange={(e) => setAddress(e.target.value)}
-              required
-            />
-          </div>
+          
 
-          <div className="form-group">
-            <a href="/measurements-form" className="link-to-measurements">Add Measurements</a>
+          <div className="form-footer">
+            <button
+              type="button"
+              className="add-measurements-btn"
+              onClick={() => window.location.href = "/measurements-form"}
+            >
+              Add Measurements
+            </button>
+            <button type="submit" className="submit-btn">
+              Save Customer
+            </button>
           </div>
-
-          <button type="submit" className="submit-btn">Save Customer</button>
         </form>
       </div>
     </div>

@@ -5,7 +5,6 @@ import './AdminDashboard.css';
 const AdminDashboard = () => {
   return (
     <div className="admin-dashboard">
-      <h1 className="animate__animated animate__fadeInDown">Admin Dashboard</h1>
 
       <div className="dashboard-cards row">
         {/* Manage Customers Card */}
